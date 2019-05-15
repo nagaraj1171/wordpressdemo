@@ -14,7 +14,7 @@ node{
   //Stage 1 : Build the docker image.
     stage('Build image') {
         sh("docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD")
-        sh("docker build -t nagaraj1171/${imageTag} .")
+        sh("docker build -t nagaraj1171/${imageTag} -f Dockerfile_wordpress .")
     }
 
     //Stage 2 : Push the image to docker registry

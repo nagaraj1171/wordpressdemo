@@ -55,6 +55,6 @@ node{
                     sh("kubectl get pods -o=wide")
 
 
-  }
-
+                }
+    }
 }

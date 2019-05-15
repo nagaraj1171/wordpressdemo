@@ -1,0 +1,66 @@
+kubectl create -f kube_file.yaml
+kubectl delete -f kube_volume.yaml
+sh build_images.sh
+
+kubectl get pvc
+
+
+
+
+
+
+-------------------
+To Create a K8
+#################################
+kubectl apply -f mysql-volumeclaim.yaml
+kubectl apply -f wordpress-volumeclaim.yaml
+kubectl get pvc
+kubectl create secret generic mysql --from-literal=password=mysql12#
+kubectl create -f mysql.yaml
+kubectl get pod -l app=mysql
+kubectl create -f mysql-services.yaml
+kubectl get service mysql
+
+kubectl create -f wordpress.yaml
+
+kubectl get pod -l app=wordpress
+
+kubectl create -f wordpress-service.yaml
+
+kubectl get svc -l app=wordpress
+
+
+kubectl get pods -o=wide
+
+minikube service list
+kubectl get pods -o=wide
+
+http://192.168.99.101:30817
+
+
+
+
+kubectl delete -f wordpress.yaml
+kubectl delete -f mysql.yaml
+kubectl delete -f wordpress-service.yaml
+kubectl delete -f mysql-service.yaml
+
+
+
+
+kubectl delete pvc wordpress-volumeclaim
+kubectl delete pvc mysql-volumeclaim
+
+
+
+
+
+docker build -f Dockerfile_wordpress -t nagaraj1171/wordpress:v.0.6 .
+
+docker push nagaraj1171/wordpress:v.0.6
+
+
+
+docker build -f _bkp -t nagaraj1171/wordpress:v.0.7 .
+
+docker push nagaraj1171/wordpress:v.0.7

@@ -33,7 +33,7 @@ node{
                     sh("kubectl apply -f wordpress-volumeclaim.yaml")
               // Deploy MySQL Password
 
-                    sh("kubectl create secret generic mysql --from-literal=password=$pass")
+                    sh("kubectl create secret generic mysql --from-literal=password=mysql123")
 
               // Create MySQL Service
 

@@ -1,13 +1,13 @@
 node{
 
   //Define all variables
-  def project = 'contentful'
+  def project = 'wordpress_app'
   def appName = 'my-first-microservice'
   def serviceName = "${appName}-backend"
   def imageVersion = 'v2.0'
   def namespace = 'development'
   def imageTag = "wordpress:v2.0"
-  
+
   //Checkout Code from Git
   checkout scm
 
@@ -57,4 +57,4 @@ node{
 
   }
 
-} 
+}
